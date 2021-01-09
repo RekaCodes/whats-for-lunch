@@ -7,18 +7,12 @@ import numpy as np
 import datetime as dt
 import random
 
-import plotly.express as px
-import plotly.graph_objects as go
-
-# import data
-# from restaurants import list, df
-
-
 
 # build app
 
 def main():
 
+    ### data ###
     df = pd.read_csv('local_restaurants.csv')
     df.style.hide_index()
 
@@ -46,8 +40,6 @@ def main():
     ]['restaurants'].unique()
 
 
-    # st.write("Just press the button below to choose a restaurant.")
-
     if st.button('Choose Restaurant'):        
         restaurant = random.choice(filtered_list)
         st.write(restaurant)
@@ -55,7 +47,6 @@ def main():
         st.write("")
 
 
-    ### Expand for more options ###
     with st.beta_expander(f"Click for other {select_cuisine} options."):
         st.dataframe(data=df[
             (df['cuisine'] == filter_cuisine)]['restaurants'])
