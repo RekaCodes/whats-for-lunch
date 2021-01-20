@@ -13,7 +13,8 @@ import random
 def main():
 
     ### data ###
-    df = pd.read_csv('whats_for_lunch/local_restaurants.csv')
+    # df = pd.read_csv('whats_for_lunch/local_restaurants.csv')
+    df = pd.read_csv('local_restaurants.csv')
     df.style.hide_index()
 
     ### Variables ###
@@ -46,7 +47,7 @@ def main():
     'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
     )
     filter_cuisine = select_cuisine
-    st.markdown("###")
+    # st.markdown("###")
 
     
     # st.markdown("#")
@@ -63,14 +64,28 @@ def main():
     if st.button('Select Restaurant'):        
         restaurant = random.choice(filtered_list)
         menu = df[df['restaurants']==restaurant]['menu'].tolist()[0]
-        
-        # container_restaurant.title(restaurant)
-        # container_restaurant.write("---")
-        # container_restaurant.write(f"[Click to view menu.]({menu})")
-        st.subheader(restaurant)
-        # st.write("---")
-        st.write(f"[Click to view menu.]({menu})")
-        
+        address= df[df['restaurants']==restaurant]['address'].tolist()[0]
+        phone= df[df['restaurants']==restaurant]['phone'].tolist()[0]
+        for_maps = "_".join(address.split())
+        gmaps= f'https://www.google.com/maps/place/{for_maps}'
+
+        st.markdown("#")
+        col1, col2 = st.beta_columns(2)
+
+        with col1:
+            # container_restaurant.title(restaurant)
+            # container_restaurant.write("---")
+            # container_restaurant.write(f"[Click to view menu.]({menu})")
+            st.title(restaurant)
+            # st.write("---")
+            st.write(f"[Click to view menu.]({menu})")
+        with col2:
+            st.markdown('**Details from Google Maps:**')
+            # st.image(f'gmaps/{restaurant}.jpg')
+            st.write(address)
+            st.write(phone)
+            st.write(f"[See in Google Maps.]({gmaps})")
+
         st.markdown("#")
         with st.beta_expander(f"Click for other {select_cuisine} options."):
                 other_restauarants = df[
@@ -82,7 +97,7 @@ def main():
     else:
         # container_restaurant.header("Choose cuisine and press Select Restaurant.")
         # container_restaurant.write("---")
-        st.subheader("")
+        st.title("")
         # st.write("---")
 
 

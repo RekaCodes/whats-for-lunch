@@ -1,24 +1,24 @@
-﻿restaurants,cuisine,menu
-CAVA,Mediterranean, https://try.cava.com/menu/
-Chipotle,Fast Food, https://www.chipotle.com/order/#menu
-Jasmin's,Mediterranean, https://www.jasminandolivz.com/craft-your-meal
-Burger-Fi,Fast Food, https://www.burgerfi.com/menu/
-Shake Shack,Fast Food, https://www.shakeshack.com/food-and-drink/
-Tasu,Asian, https://www.shikitasu.com/tasu-cary
-Enrigo's,Italian, https://dineenrigo.com/lunch-menu/
-Gonza,Mexican, https://www.gonzatacosytequila.com/
-Chanticleer,French, https://www.chanticleerrestaurant.com/our-menu/
-Sassool,Mediterranean, https://www.sassool.com/menu/deli-menu
-Sushi Thai,Asian, https://sushithaicary.com/Japanese_and_Thai_Restaurant_Cuisine_Cary_NC/
-Lugano Ristorante,Italian, http://www.luganocary.com/menus/lunch-menu/
-Totopos,Mexican, https://www.totoposfoodandtequila.com/menu/
-Doherty's,Irish Pub, https://www.dohertysirishpubnc.com/menu
-Big Mike's BBQ,BBQ, https://bigmikesbbqnc.com/menu-featuring-big-mikes-bbq/
-Thai Villa,Asian, https://www.thaivillanc.com/
-City BBQ,BBQ, https://www.citybbq.com/menu/
-La Cocina,Mexican, https://www.lacocinanc.com/menu/
-Torerro's,Mexican, https://torerosmexicanrestaurants.com/menu/
-Mellow Mushroom,Pizza, https://mellowmushroom.com/menu/
-The Provincial,American, http://www.theprovincialapex.com/
-Pizzeria Veritas,Pizza, https://pizzeriaveritas.com/menu/
-Carolina Ale House,American, https://www.carolinaalehouse.com/menu/
+﻿restaurants,cuisine,menu,address,phone
+CAVA,Mediterranean, https://try.cava.com/menu/,"2001 Walnut St Suite 100, Cary, NC 27511",(919) 342-5937
+Chipotle,Fast Food, https://www.chipotle.com/order/#menu,"100 Wrenn Dr #103, Cary, NC 27511",(919) 462-1223
+Jasmin's,Mediterranean, https://www.jasminandolivz.com/craft-your-meal,"1109 Ledsome Ln, Cary, NC 27511",(919) 469-1112
+Burger-Fi,Fast Food, https://www.burgerfi.com/menu/,"2001 Walnut St #101, Cary, NC 27518",(919) 647-4785
+Shake Shack,Fast Food, https://www.shakeshack.com/food-and-drink/,"310 Colonades Way, Cary, NC 27518",(919) 230-9390
+Tasu,Asian, https://www.shikitasu.com/tasu-cary,"525 New Waverly Pl STE 103, Cary, NC 27518",(919) 977-4037
+Enrigo's,Italian, https://dineenrigo.com/lunch-menu/,"575 New Waverly Pl #106, Cary, NC 27518",(919) 854-7731
+Gonza,Mexican, https://www.gonzatacosytequila.com/,"525 New Waverly Pl #104, Cary, NC 27518",(919) 653-7310
+Chanticleer,French, https://www.chanticleerrestaurant.com/our-menu/,"6490 Tryon Rd, Cary, NC 27518",(919) 781-4810
+Sassool,Mediterranean, https://www.sassool.com/menu/deli-menu,"1347 Kildaire Farm Rd, Cary, NC 27511",(919) 300-5586
+Sushi Thai,Asian, https://sushithaicary.com/Japanese_and_Thai_Restaurant_Cuisine_Cary_NC/,"106 Kilmayne Dr, Cary, NC 27511",(919) 467-5747
+Lugano Ristorante,Italian, http://www.luganocary.com/menus/lunch-menu/,"1060 Darrington Dr, Cary, NC 27513",(919) 468-7229
+Totopos,Mexican, https://www.totoposfoodandtequila.com/menu/,"1388 Kildaire Farm Rd, Cary, NC 27511",(919) 678-3449
+Doherty's,Irish Pub, https://www.dohertysirishpubnc.com/menu,"5490 Apex Peakway, Apex, NC 27502",(919) 387-4100
+Big Mike's BBQ,BBQ, https://bigmikesbbqnc.com/menu-featuring-big-mikes-bbq/,"1222 NW Maynard Rd, Cary, NC 27513",(919) 799-2023
+Thai Villa,Asian, https://www.thaivillanc.com/,"1319 Buck Jones Rd, Raleigh, NC 27606",(919) 462-9010
+City BBQ,BBQ, https://www.citybbq.com/menu/,"1305 Kildaire Farm Rd, Cary, NC 27511",(919) 439-5191
+La Cocina,Mexican, https://www.lacocinanc.com/menu/,"100 Macgregor Pines Dr, Cary, NC 27511",(919) 467-0780
+Torerro's,Mexican, https://torerosmexicanrestaurants.com/menu/,"1207 Kildaire Farm Rd, Cary, NC 27511",(919) 468-8711
+Mellow Mushroom,Pizza, https://mellowmushroom.com/menu/,"4300 NW Cary Pkwy, Cary, NC 27513",(919) 463-7779
+The Provincial,American, http://www.theprovincialapex.com/,"119 N Salem St, Apex, NC 27502",(919) 372-5721
+Pizzeria Veritas,Pizza, https://pizzeriaveritas.com/menu/,"1260 NW Maynard Rd, Cary, NC 27513",(919) 319-3232
+Carolina Ale House,American, https://www.carolinaalehouse.com/menu/,"2240 Walnut St, Cary, NC 27518",(919) 854-9444
