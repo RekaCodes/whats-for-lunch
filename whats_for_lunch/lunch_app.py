@@ -13,7 +13,7 @@ import random
 def main():
 
     ### data ###
-    df = pd.read_csv('whats_for_lunch/local_restaurants.csv')
+    df = pd.read_csv('local_restaurants.csv')
     df.style.hide_index()
 
     ### Variables ###
@@ -24,25 +24,33 @@ def main():
  
     ### Sidebar ###
 
-    st.sidebar.title("What's for lunch?")
-    st.markdown("#")
+    # st.sidebar.title("What's for lunch?")
+    # st.markdown("#")
 
-    select_cuisine = st.sidebar.selectbox("Choose your cuisine:",
-    ('American', 'Asian', 'BBQ', 'Fast Food', 'French', 'Italian', 
-    'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
-    )
-    filter_cuisine = select_cuisine
+    # select_cuisine = st.sidebar.selectbox("Choose your cuisine:",
+    # ('American', 'Asian', 'BBQ', 'Fast Food', 'French', 'Italian', 
+    # 'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
+    # )
+    # filter_cuisine = select_cuisine
 
 
 
     ### Webpage ###
     
     st.markdown("#")
-    # st.title("What's for lunch?")
+    st.title("What's for lunch?")
     st.markdown("#")
+
+    select_cuisine = st.selectbox("Choose cuisine and press Select Restaurant:",
+    ('American', 'Asian', 'BBQ', 'Fast Food', 'French', 'Italian', 
+    'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
+    )
+    filter_cuisine = select_cuisine
+    st.markdown("#")
+
     
     # st.markdown("#")
-    container_restaurant = st.beta_container()
+    # container_restaurant = st.beta_container()
 
 
     
@@ -52,13 +60,17 @@ def main():
 
     # st.dataframe(data=df)
 
-    if st.sidebar.button('Select Restaurant'):        
+    if st.button('Select Restaurant'):        
         restaurant = random.choice(filtered_list)
         menu = df[df['restaurants']==restaurant]['menu'].tolist()[0]
         
-        container_restaurant.title(restaurant)
-        container_restaurant.write("---")
-        container_restaurant.write(f"[Click to view menu.]({menu})")
+        # container_restaurant.title(restaurant)
+        # container_restaurant.write("---")
+        # container_restaurant.write(f"[Click to view menu.]({menu})")
+        st.title(restaurant)
+        # st.write("---")
+        st.write(f"[Click to view menu.]({menu})")
+        
         st.markdown("#")
         with st.beta_expander(f"Click for other {select_cuisine} options."):
                 other_restauarants = df[
@@ -68,8 +80,11 @@ def main():
                 st.dataframe(data=other_restauarants)
                
     else:
-        container_restaurant.header("Choose cuisine and press Select Restaurant.")
-        container_restaurant.write("---")
+        # container_restaurant.header("Choose cuisine and press Select Restaurant.")
+        # container_restaurant.write("---")
+        st.header("")
+        # st.write("---")
+
 
     st.markdown("#")
 
