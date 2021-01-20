@@ -46,7 +46,7 @@ def main():
     'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
     )
     filter_cuisine = select_cuisine
-    st.markdown("#")
+    st.markdown("###")
 
     
     # st.markdown("#")
@@ -67,7 +67,7 @@ def main():
         # container_restaurant.title(restaurant)
         # container_restaurant.write("---")
         # container_restaurant.write(f"[Click to view menu.]({menu})")
-        st.title(restaurant)
+        st.subheader(restaurant)
         # st.write("---")
         st.write(f"[Click to view menu.]({menu})")
         
@@ -82,13 +82,13 @@ def main():
     else:
         # container_restaurant.header("Choose cuisine and press Select Restaurant.")
         # container_restaurant.write("---")
-        st.header("")
+        st.subheader("")
         # st.write("---")
 
 
     st.markdown("#")
 
-    st.write()
+
     
 
 if __name__ == '__main__':
