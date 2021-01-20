@@ -9,16 +9,12 @@ import random
 
 
 # build app
-
 def main():
+
 
     ### data ###
     df = pd.read_csv('whats_for_lunch/local_restaurants.csv')
     df.style.hide_index()
-
-    ### Variables ###
-    filter_cuisine = 'American'
-
 
 
     ### Webpage ###
@@ -26,6 +22,8 @@ def main():
     st.markdown("#")
     st.title("What's for lunch?")
     st.markdown("#")
+
+    filter_cuisine = 'American'
 
     select_cuisine = st.selectbox("Choose cuisine and press Select Restaurant:",
     ('American', 'Asian', 'BBQ', 'Fast Food', 'French', 'Italian', 
@@ -46,7 +44,7 @@ def main():
         for_maps = "_".join(address.split())
         city = df[df['restaurants']==restaurant]['city'].tolist()[0]
         state = df[df['restaurants']==restaurant]['state'].tolist()[0]
-
+        full_address = address+", "+city+", "+state
 
         map_search= f'https://www.google.com/maps/search/{restaurant}+{city}+{state}'
         gmaps = "_".join(map_search.split())
@@ -59,7 +57,7 @@ def main():
             st.write(f"[Click to view menu.]({menu})")
         with col2:
             st.markdown('**Details from Google Maps:**')
-            st.write(address)
+            st.write(full_address)
             st.write(phone)
             st.write(f"[See in Google Maps.]({gmaps})")
 
