@@ -14,25 +14,10 @@ def main():
 
     ### data ###
     df = pd.read_csv('whats_for_lunch/local_restaurants.csv')
-    # df = pd.read_csv('local_restaurants.csv')
     df.style.hide_index()
 
     ### Variables ###
     filter_cuisine = 'American'
-    filter_fast = 0
-    filter_dine_in = 0
-
- 
-    ### Sidebar ###
-
-    # st.sidebar.title("What's for lunch?")
-    # st.markdown("#")
-
-    # select_cuisine = st.sidebar.selectbox("Choose your cuisine:",
-    # ('American', 'Asian', 'BBQ', 'Fast Food', 'French', 'Italian', 
-    # 'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
-    # )
-    # filter_cuisine = select_cuisine
 
 
 
@@ -47,19 +32,11 @@ def main():
     'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
     )
     filter_cuisine = select_cuisine
-    # st.markdown("###")
-
-    
-    # st.markdown("#")
-    # container_restaurant = st.beta_container()
-
 
     
     filtered_list = df[
         (df['cuisine']==filter_cuisine)
     ]['restaurants'].unique()
-
-    # st.dataframe(data=df)
 
     if st.button('Select Restaurant'):        
         restaurant = random.choice(filtered_list)
@@ -67,21 +44,21 @@ def main():
         address= df[df['restaurants']==restaurant]['address'].tolist()[0]
         phone= df[df['restaurants']==restaurant]['phone'].tolist()[0]
         for_maps = "_".join(address.split())
-        gmaps= f'https://www.google.com/maps/place/{for_maps}'
+        city = df[df['restaurants']==restaurant]['city'].tolist()[0]
+        state = df[df['restaurants']==restaurant]['state'].tolist()[0]
+
+
+        map_search= f'https://www.google.com/maps/search/{restaurant}+{city}+{state}'
+        gmaps = "_".join(map_search.split())
 
         st.markdown("#")
         col1, col2 = st.beta_columns(2)
 
         with col1:
-            # container_restaurant.title(restaurant)
-            # container_restaurant.write("---")
-            # container_restaurant.write(f"[Click to view menu.]({menu})")
             st.title(restaurant)
-            # st.write("---")
             st.write(f"[Click to view menu.]({menu})")
         with col2:
             st.markdown('**Details from Google Maps:**')
-            # st.image(f'gmaps/{restaurant}.jpg')
             st.write(address)
             st.write(phone)
             st.write(f"[See in Google Maps.]({gmaps})")
@@ -95,15 +72,7 @@ def main():
                 st.dataframe(data=other_restauarants)
                
     else:
-        # container_restaurant.header("Choose cuisine and press Select Restaurant.")
-        # container_restaurant.write("---")
         st.title("")
-        # st.write("---")
-
-
-    st.markdown("#")
-
-
     
 
 if __name__ == '__main__':
