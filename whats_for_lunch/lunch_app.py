@@ -13,7 +13,7 @@ import random
 def main():
 
     ### data ###
-    df = pd.read_csv('local_restaurants.csv')
+    df = pd.read_csv('whats_for_lunch/local_restaurants.csv')
     df.style.hide_index()
 
     ### Variables ###
