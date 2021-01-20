@@ -22,34 +22,58 @@ def main():
     filter_dine_in = 0
 
  
-    ### Webpage ###
-    
+    ### Sidebar ###
 
-    st.title("What's for lunch?")
-    
+    st.sidebar.title("What's for lunch?")
 
-    select_cuisine = st.selectbox("Choose your cuisine:",
+    select_cuisine = st.sidebar.selectbox("Choose your cuisine:",
     ('American', 'Asian', 'BBQ', 'Fast Food', 'French', 'Italian', 
     'Irish Pub', 'Mediterranean', 'Mexican', 'Pizza')
     )
     filter_cuisine = select_cuisine
-    
 
+
+
+    ### Webpage ###
+    
+    st.markdown("#")
+    # st.title("What's for lunch?")
+    st.markdown("#")
+    
+    # st.markdown("#")
+    container_restaurant = st.beta_container()
+
+
+    
     filtered_list = df[
         (df['cuisine']==filter_cuisine)
     ]['restaurants'].unique()
 
+    # st.dataframe(data=df)
 
-    if st.button('Choose Restaurant'):        
+    if st.sidebar.button('Select Restaurant'):        
         restaurant = random.choice(filtered_list)
-        st.write(restaurant)
+        menu = df[df['restaurants']==restaurant]['menu'].tolist()[0]
+        
+        container_restaurant.title(restaurant)
+        container_restaurant.write("---")
+        container_restaurant.write(f"[Click to view menu.]({menu})")
+        st.markdown("#")
+        with st.beta_expander(f"Click for other {select_cuisine} options."):
+                other_restauarants = df[
+                    (df['cuisine'] == filter_cuisine)][['restaurants', 'menu']]
+                other_restauarants.set_index('restaurants', inplace=True)
+                other_restauarants.rename(columns={'menu':""}, inplace=True)
+                st.dataframe(data=other_restauarants)
+               
     else:
-        st.write("")
+        container_restaurant.header("Choose cuisine and press Select Restaurant.")
+        container_restaurant.write("---")
 
+    st.markdown("#")
 
-    with st.beta_expander(f"Click for other {select_cuisine} options."):
-        st.dataframe(data=df[
-            (df['cuisine'] == filter_cuisine)]['restaurants'])
+    st.write()
+    
 
 if __name__ == '__main__':
     main()

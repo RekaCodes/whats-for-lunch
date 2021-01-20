@@ -1,26 +1,24 @@
-﻿restaurants,cuisine
-CAVA,Mediterranean
-Chipotle,Fast Food
-Jasmin's,Mediterranean
-Burger-Fi,Fast Food
-Shake Shack,Fast Food
-Tasu,Asian
-Enrigo's,Italian
-Gonza,Mexican
-Chanticleer,French
-Chef's Palette,American
-Sassool,Mediterranean
-Sushi Thai,Asian
-Lugano Ristorante,Italian
-Totopos,Mexican
-Doherty's,Irish Pub
-Big Mike's BBQ,BBQ
-Tribeca Tavern,American
-Thai Villa,Asian
-City BBQ,BBQ
-La Cocina,Mexican
-Torerro's,Mexican
-Mellow Mushroom,Pizza
-The Provincial,American
-Pizzeria Veritas,Pizza
-Carolina Ale House,American
+﻿restaurants,cuisine,menu
+CAVA,Mediterranean, https://try.cava.com/menu/
+Chipotle,Fast Food, https://www.chipotle.com/order/#menu
+Jasmin's,Mediterranean, https://www.jasminandolivz.com/craft-your-meal
+Burger-Fi,Fast Food, https://www.burgerfi.com/menu/
+Shake Shack,Fast Food, https://www.shakeshack.com/food-and-drink/
+Tasu,Asian, https://www.shikitasu.com/tasu-cary
+Enrigo's,Italian, https://dineenrigo.com/lunch-menu/
+Gonza,Mexican, https://www.gonzatacosytequila.com/
+Chanticleer,French, https://www.chanticleerrestaurant.com/our-menu/
+Sassool,Mediterranean, https://www.sassool.com/menu/deli-menu
+Sushi Thai,Asian, https://sushithaicary.com/Japanese_and_Thai_Restaurant_Cuisine_Cary_NC/
+Lugano Ristorante,Italian, http://www.luganocary.com/menus/lunch-menu/
+Totopos,Mexican, https://www.totoposfoodandtequila.com/menu/
+Doherty's,Irish Pub, https://www.dohertysirishpubnc.com/menu
+Big Mike's BBQ,BBQ, https://bigmikesbbqnc.com/menu-featuring-big-mikes-bbq/
+Thai Villa,Asian, https://www.thaivillanc.com/
+City BBQ,BBQ, https://www.citybbq.com/menu/
+La Cocina,Mexican, https://www.lacocinanc.com/menu/
+Torerro's,Mexican, https://torerosmexicanrestaurants.com/menu/
+Mellow Mushroom,Pizza, https://mellowmushroom.com/menu/
+The Provincial,American, http://www.theprovincialapex.com/
+Pizzeria Veritas,Pizza, https://pizzeriaveritas.com/menu/
+Carolina Ale House,American, https://www.carolinaalehouse.com/menu/
