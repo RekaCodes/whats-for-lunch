@@ -55,6 +55,7 @@ def main():
         with col1:
             st.title(restaurant)
             st.write(f"[Click to view menu.]({menu})")
+            st.markdown('##') 
         with col2:
             st.markdown('**Details from Google Maps:**')
             st.write(full_address)
@@ -75,3 +76,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
