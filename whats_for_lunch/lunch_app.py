@@ -25,6 +25,7 @@ def main():
     ### Sidebar ###
 
     st.sidebar.title("What's for lunch?")
+    st.markdown("#")
 
     select_cuisine = st.sidebar.selectbox("Choose your cuisine:",
     ('American', 'Asian', 'BBQ', 'Fast Food', 'French', 'Italian', 
