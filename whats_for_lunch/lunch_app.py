@@ -63,16 +63,20 @@ def main():
             st.write(f"[See in Google Maps.]({gmaps})")
 
         st.markdown("#")
-        with st.beta_expander(f"Click for other {select_cuisine} options."):
-                other_restauarants = df[
-                    (df['cuisine'] == filter_cuisine)][['restaurants', 'menu']]
-                other_restauarants.set_index('restaurants', inplace=True)
-                other_restauarants.rename(columns={'menu':""}, inplace=True)
-                st.dataframe(data=other_restauarants)
+        # with st.beta_expander(f"Click for other {select_cuisine} options."):
+        #         other_restauarants = df[
+        #             (df['cuisine'] == filter_cuisine)][['restaurants', 'menu']]
+        #         other_restauarants.set_index('restaurants', inplace=True)
+        #         other_restauarants.rename(columns={'menu':""}, inplace=True)
+        #         st.dataframe(data=other_restauarants)
+        st.markdown(f"""*Not feeling **{restaurant}** today?  
+        Click Select Restaurant button for additional {select_cuisine} dining, or try a different cuisine.*""")
                
     else:
         st.title("")
     
+
+
 
 if __name__ == '__main__':
     main()
